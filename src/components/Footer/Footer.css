@@ -7,6 +7,9 @@
     background-position-x: center;
     box-shadow: inset 0 0 0 1000px rgb(0, 0, 0, 0.6);
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer {
     min-width: 100vw;
@@ -19,5 +22,6 @@ footer {
 i{
     color: #ffffff;
 }
-
-
+.footer--form{
+    max-width: 80vw;
+}
