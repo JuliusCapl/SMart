@@ -1,0 +1,9 @@
+.my--nav{
+    background-color: #6b726c;
+    font-size: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+}   

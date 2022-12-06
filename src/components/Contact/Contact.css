@@ -1,0 +1,7 @@
+.contact--me {
+    max-width: 100wv;
+    min-height: 100vh;
+    background-color: #fff;
+    margin-bottom: 100vh;
+    z-index: -9;
+}
