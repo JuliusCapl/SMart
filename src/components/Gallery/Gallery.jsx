@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import "./Gallery.css";
-import pic1 from "../../assets/img/pic1.jpg";
-import pic2 from "../../assets/img/pic2.jpg";
-import pic3 from "../../assets/img/pic3.jpg";
-import pic4 from "../../assets/img/pic4.jpg";
-import pic5 from "../../assets/img/pic5.jpg";
-import pic6 from "../../assets/img/pic6.jpg";
-import pic7 from "../../assets/img/pic7.jpg";
+import pic1 from "/img/pic1.jpg";
+import pic2 from "/img/pic2.jpg";
+import pic3 from "/img/pic3.jpg";
+import pic4 from "/img/pic4.jpg";
+import pic5 from "/img/pic5.jpg";
+import pic6 from "/img/pic6.jpg";
+import pic7 from "/img/pic7.jpg";
 
 const Gallery = () => {
   let galleryData = [

@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import './Shop.css'
-import pic1 from './../../assets/img/pic1.jpg'
-import pic2 from './../../assets/img/pic2.jpg'
-import pic3 from './../../assets/img/pic3.jpg'
-import pic4 from './../../assets/img/pic4.jpg'
-import pic5 from './../../assets/img/pic5.jpg'
+import pic1 from '/img/pic1.jpg'
+import pic2 from '/img/pic2.jpg'
+import pic3 from '/img/pic3.jpg'
+import pic4 from '/img/pic4.jpg'
+import pic5 from '/img/pic5.jpg'
 
 const Shop = () => {
   let paintings = [
