@@ -8,6 +8,11 @@ import Bio from './components/Bio/Bio.jsx'
 import Shop from './components/Shop/Shop.jsx'
 import Gallery from './components/Gallery/Gallery.jsx'
 import NotFound from './components/NotFound/NotFound.jsx'
+import Mailer from './components/Control/Mailer.jsx'
+import Login from './components/Control/Login.jsx'
+import Menu from './components/Control/Menu.jsx'
+import ShopPost from './components/Control/ShopPost.jsx'
+import GalleryPost from './components/Control/GalleryPost.jsx'
 
 function App() {
 
@@ -20,6 +25,11 @@ function App() {
         <Route path='/bio' element={<Bio/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/menu' element={<Menu/>}/>
+        <Route path='/mailer' element={<Mailer/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/shop-post' element={<ShopPost/>}/>
+        <Route path='/gallery-post' element={<GalleryPost/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer />

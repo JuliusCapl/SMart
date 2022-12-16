@@ -51,7 +51,7 @@ const Gallery = () => {
         <img src={tempimgSrc} onClick={()=>{setModel(false)}}/>
       </div>
       <section className="my--gallery">
-        <h2 className="container">Gallery</h2>
+        <h2 className="container text-center mt-3 mb-5">Gallery</h2>
         <div className="gallery">
           {galleryData.map((item, index) => {
             return (

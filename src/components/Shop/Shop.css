@@ -47,7 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #ccc;
     transition: opacity .4s ease, transform .5s ease-in-out;
     visibility: hidden;
     opacity: 0;
@@ -70,4 +70,9 @@
     box-sizing: border-box;
     padding: 20px 0 20px;
     margin: 0 auto;
+}
+.met{
+    position: fixed;
+    top: 0;
+    left: 0;
 }

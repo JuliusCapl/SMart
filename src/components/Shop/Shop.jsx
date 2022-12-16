@@ -46,13 +46,13 @@ const Shop = () => {
         <img src={tempimgSrc} onClick={()=>{setModel(false)}}/>
       </div>
       <section className='my--shop'>
-          <h2 className='text-center mt-5 pt-4 mb-5'>Have a look of my paintings</h2>
+          <h2 className='text-center mt-3 mb-5'>Have a look of my paintings</h2>
           <div className='shop'>
           {paintings.map((item , index) =>{
             return(
               <div className='paint' key={index} onClick={()=>{getImg(item.srcImg)}}>
                 <img src={item.srcImg} style={{width: '100%'}}/>
-                <h3>{item.met}</h3>
+                <h3 className='met'>{item.met}</h3>
               </div>
             )
           })}

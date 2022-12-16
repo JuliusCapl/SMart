@@ -5,7 +5,7 @@ const Bio = () => {
   return (
     <>
         <section className='my--bio py-5 mt-5'>
-            <div className='container '>
+            <div className='container'>
               <div className='row bio--row'>
                 <div className='image--container col-12 col-md-6'>
                   <img className='image--bio' src="/img/bio--sm.jpg" alt="Image of my bio" />
