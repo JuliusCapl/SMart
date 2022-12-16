@@ -1,7 +1,8 @@
-import React from "react";
+import axios from 'axios'
 import "./Contact.css";
 
 const Contact = () => {
+  const form = document.getElementById('formEmail')
   return (
     <>
       <section className="contact--me pt-5">
@@ -12,16 +13,30 @@ const Contact = () => {
               <img className='image--contact' src="/img/bio--sm.jpg" alt="Image of my contact form" />
             </div>
             <div className="col-12 col-md-6">
-              <form className="container">
+              <form id="formEmail" className="container" onSubmit={e=>{
+                e.preventDefault()
+                alert('Your message was sent successfully')
+                let email = (e.target.email.value),
+                    option = (e.target.option.value),
+                    message = (e.target.message.value)
+                
+                  axios.post('http://localhost:4000/contact',{
+                    email,
+                    option,
+                    message
+              })
+                .catch (error=>console.log(error))
+                  form.reset()
+              }}>
                 <div>
                   <label htmlFor="email" className="form-label">
                     Write your email
                   </label>
-                  <input type="text" name="email" className="form-control" />
+                  <input type="text" name="email" id="email" className="form-control" />
                 </div>
                 <div>
-                  <label htmlFor="subject">Choose an option</label>
-                  <select name="" id="" className="form-select">
+                  <label htmlFor="option">Choose an option</label>
+                  <select name="option" id="option" className="form-select">
                     <option value="0"></option>
                     <option value="1">I want to buy</option>
                     <option value="2">I want to get in touch</option>
@@ -29,8 +44,8 @@ const Contact = () => {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="">Write your thoughts</label>
-                  <textarea name="" id="" cols="30" rows="7" className="form-control"></textarea>
+                  <label htmlFor="message">Write your thoughts</label>
+                  <textarea name="message" id="message" cols="30" rows="7" className="form-control"></textarea>
                 </div>
                 <button type="submit" className="btn btn-outline-secondary">
                   Send
@@ -42,36 +57,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="contact--me pt-5">
-        <h3 className="container text-center pt-4 mt-4">Let's get in touch</h3>
-        <form className="container">
-          <div>
-            <label htmlFor="email" className="form-label">
-              Write your email
-            </label>
-            <input type="text" name="email" className="form-control" />
-          </div>
-          <div>
-            <label htmlFor="subject">Choose an option</label>
-            <select name="" id="" className="form-select">
-              <option value="0"></option>
-              <option value="1">I want to buy</option>
-              <option value="2">I want to get in touch</option>
-              <option value="3">I want to subscribe to your newsletter</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="">Write your thoughts</label>
-            <textarea name="" id="" cols="30" rows="7" className="form-control"></textarea>
-          </div>
-          <button type="submit" className="btn btn-outline-secondary">
-            Send
-          </button>
-          <button type="reset" className="btn btn-outline-secondary m-3">
-            Clear
-          </button>
-        </form>
       </section>
     </>
   );
